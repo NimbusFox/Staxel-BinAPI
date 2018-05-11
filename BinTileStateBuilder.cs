@@ -1,15 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Plukit.Base;
-using Staxel;
 using Staxel.Logic;
-using Staxel.Rendering;
 using Staxel.Tiles;
 using Staxel.TileStates;
-using Staxel.TileStates.Docks;
 
 namespace NimbusFox.BinAPI {
     public class BinTileStateBuilder : ITileStateBuilder, IDisposable {
