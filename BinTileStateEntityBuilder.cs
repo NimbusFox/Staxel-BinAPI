@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Plukit.Base;
+﻿using Plukit.Base;
 using Staxel.Logic;
 using Staxel.Tiles;
 using Staxel.TileStates.Docks;
@@ -12,10 +7,6 @@ namespace NimbusFox.BinAPI {
     public class BinTileStateEntityBuilder : DockTileStateEntityBuilder, IEntityPainterBuilder, IEntityLogicBuilder2, IEntityLogicBuilder {
         EntityLogic IEntityLogicBuilder.Instance(Entity entity, bool server) {
             return new BinTileStateEntityLogic(entity);
-        }
-
-        public new void Load() {
-            base.Load();
         }
 
         EntityPainter IEntityPainterBuilder.Instance() {

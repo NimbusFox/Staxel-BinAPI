@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using Plukit.Base;
 using Staxel;
 using Staxel.Client;
@@ -25,9 +21,8 @@ namespace NimbusFox.BinAPI {
         public override void BeforeRender(DeviceContext graphics, Vector3D renderOrigin, Entity entity,
             AvatarController avatarController, Timestep renderTimestep) {
             base.BeforeRender(graphics, renderOrigin, entity, avatarController, renderTimestep);
-            var logic = entity.Logic as BinTileStateEntityLogic;
 
-            if (logic == null) {
+            if (!(entity.Logic is BinTileStateEntityLogic logic)) {
                 return;
             }
 
